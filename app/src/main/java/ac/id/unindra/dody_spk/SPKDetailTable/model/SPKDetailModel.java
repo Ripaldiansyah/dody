@@ -5,11 +5,12 @@ import ac.id.unindra.dody_spk.login.model.LoginModel;
 public class SPKDetailModel {
     String SPKId;
     String SPKName;
-    LoginModel user;
+    String fullname;
     String createdAt;
     private final String[] columnHeader = {
             "ID SPK",
             "Nama SPK",
+            "Nama Operator",
             "Tanggal perhitungan",
     };
 
@@ -33,20 +34,20 @@ public class SPKDetailModel {
         return columnHeader;
     }
 
-    public LoginModel getUser() {
-        return user;
-    }
-
-    public void setUser(LoginModel user) {
-        this.user = user;
-    }
-
     public String getCreatedAt() {
         return createdAt;
     }
 
     public void setCreatedAt(String createdAt) {
         this.createdAt = createdAt;
+    }
+
+    public String getFullname() {
+        return fullname;
+    }
+
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
     }
 
 }

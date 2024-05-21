@@ -10,7 +10,7 @@
 		<defaultValueExpression><![CDATA[new java.util.Date()]]></defaultValueExpression>
 	</parameter>
 	<queryString>
-		<![CDATA[SELECT * FROM spk_rank WHERE id_spk = $P{id_spk}]]>
+		<![CDATA[SELECT * FROM spk_rank WHERE id_spk = $P{id_spk}ORDER BY alternative_rank ASC]]>
 	</queryString>
 	<field name="id_spk" class="java.lang.Object"/>
 	<field name="alternative_name" class="java.lang.Object"/>

@@ -31,7 +31,7 @@ public class SPKDetailTableModel extends AbstractTableModel implements SPKDetail
             case 1:
                 return spk.get(rowIndex).getSPKName();
             case 2:
-                return spk.get(rowIndex).getUser().getFullname();
+                return spk.get(rowIndex).getFullname();
             case 3:
                 return spk.get(rowIndex).getCreatedAt();
             default:

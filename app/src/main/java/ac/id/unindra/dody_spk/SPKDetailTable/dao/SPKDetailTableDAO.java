@@ -30,7 +30,6 @@ public class SPKDetailTableDAO implements SPKDetailService {
 		String sql = "SELECT spk.id_spk, spk.spk_name, user.full_name, spk.created_at " +
 				"FROM spk_save spk INNER JOIN users user " +
 				"ON spk.user_id = user.user_id";
-		LoginModel user = new LoginModel();
 		try {
 			stat = conn.prepareStatement(sql);
 			rs = stat.executeQuery();
@@ -38,8 +37,7 @@ public class SPKDetailTableDAO implements SPKDetailService {
 				SPKDetailModel model = new SPKDetailModel();
 				model.setSPKId(rs.getString("id_spk"));
 				model.setSPKName(rs.getString("spk_name"));
-				user.setFullname(rs.getString("full_name"));
-				model.setUser(user);
+				model.setFullname(rs.getString("full_name"));
 				model.setCreatedAt(rs.getString("created_at"));
 				spk.add(model);
 
@@ -115,11 +113,10 @@ public class SPKDetailTableDAO implements SPKDetailService {
 
 			while (rs.next()) {
 				SPKDetailModel model = new SPKDetailModel();
-				LoginModel user = new LoginModel();
+
 				model.setSPKId(rs.getString("id_spk"));
 				model.setSPKName(rs.getString("spk_name"));
-				user.setFullname(rs.getString("full_name"));
-				model.setUser(user);
+				model.setFullname(rs.getString("full_name"));
 				model.setCreatedAt(rs.getString("created_at"));
 				spk.add(model);
 			}
