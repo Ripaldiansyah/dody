@@ -13,7 +13,6 @@ import com.formdev.flatlaf.fonts.roboto.FlatRobotoFont;
 import com.formdev.flatlaf.util.UIScale;
 
 import ac.id.unindra.dody_spk.aboutApp.view.AboutAppView;
-import ac.id.unindra.dody_spk.alternativeInput.view.AlternativeInputView;
 import ac.id.unindra.dody_spk.login.view.LoginView;
 import ac.id.unindra.dody_spk.menu.view.Menu;
 
@@ -27,14 +26,12 @@ public class Main extends JFrame {
 	private void initUI() {
 		configureFrame();
 		setContentPane(new LoginView());
-
 	}
 
 	private void configureFrame() {
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setSize(UIScale.scale(new Dimension(1366, 768)));
 		setLocationRelativeTo(null);
-
 	}
 
 	public void login() {
